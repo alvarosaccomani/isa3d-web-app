@@ -1,13 +1,30 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Isa3dWebApp</title>
+  <title>ISA3D | Tus ideas, en tres dimensiones</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- Tailwind CSS & FontAwesome CDNs -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandViolet: '#7C3AED',
+            brandVioletDark: '#5B21B6',
+            brandDark: '#111827',
+            brandGray: '#1F2937'
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800 antialiased font-sans">
   <app-root></app-root>
 </body>
 </html>
