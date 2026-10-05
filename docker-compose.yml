@@ -1,6 +1,3 @@
-# docker-compose.yml
-version: '3.8'
-
 services:
   isa3d-web-app:
     container_name: isa3d-web-app
