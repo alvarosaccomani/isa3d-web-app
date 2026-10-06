@@ -1,0 +1,24 @@
+{
+  "name": "ISA3D | Tus ideas en tres dimensiones",
+  "short_name": "ISA3D",
+  "description": "Diseño, prototipado y fabricación aditiva de piezas únicas en 3D desde Luján.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111827",
+  "theme_color": "#7C3AED",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo-solo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo-solo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
