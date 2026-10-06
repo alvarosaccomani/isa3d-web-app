@@ -40,7 +40,7 @@
   </div>
 </section>
 
-<!-- CATÁLOGO / SERVICIOS -->
+<!-- CATÁLOGO / SERVICIOS (REACTIVO VÍA SIGNALS & CATALOGSERVICE) -->
 <section id="catalogo" class="py-20 max-w-7xl mx-auto px-6">
   <div class="text-center max-w-2xl mx-auto mb-16">
     <h2 class="text-3xl font-extrabold text-gray-900">Catálogo & Especialidades</h2>
@@ -48,53 +48,22 @@
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-    <!-- Card 1 -->
-    <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 overflow-hidden transition-all group">
-      <div class="h-48 bg-gradient-to-br from-violet-100 to-purple-50 flex items-center justify-center">
-        <i class="fas fa-key text-5xl text-brandViolet group-hover:scale-110 transition duration-300"></i>
+    @for (item of catalogItems(); track item.id) {
+      <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 overflow-hidden transition-all group">
+        <div class="h-48 bg-gradient-to-br {{ item.gradient }} flex items-center justify-center">
+          <i class="{{ item.icon }} text-5xl text-brandViolet group-hover:scale-110 transition duration-300"></i>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-900">{{ item.title }}</h3>
+          <p class="text-gray-600 text-sm mt-2 leading-relaxed">
+            {{ item.description }}
+          </p>
+          <a [href]="getWhatsAppUrl(item.whatsappMessage)" target="_blank" class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brandViolet hover:underline">
+            {{ item.actionText }} <i class="fas fa-arrow-right text-xs"></i>
+          </a>
+        </div>
       </div>
-      <div class="p-6">
-        <h3 class="text-xl font-bold text-gray-900">Llaveros Personalizados</h3>
-        <p class="text-gray-600 text-sm mt-2 leading-relaxed">
-          Identidad para tu marca, eventos o regalos originales con acabados limpios y colores combinados.
-        </p>
-        <a href="https://wa.me/5491164658826?text=Hola!%20Me%20interesan%20los%20llaveros%20personalizados" target="_blank" class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brandViolet hover:underline">
-          Consultar modelos <i class="fas fa-arrow-right text-xs"></i>
-        </a>
-      </div>
-    </div>
-
-    <!-- Card 2 -->
-    <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 overflow-hidden transition-all group">
-      <div class="h-48 bg-gradient-to-br from-violet-100 to-indigo-50 flex items-center justify-center">
-        <i class="fas fa-praying-hands text-5xl text-brandViolet group-hover:scale-110 transition duration-300"></i>
-      </div>
-      <div class="p-6">
-        <h3 class="text-xl font-bold text-gray-900">Devoción en Detalle</h3>
-        <p class="text-gray-600 text-sm mt-2 leading-relaxed">
-          Imágenes y esculturas religiosas trabajadas con máxima definición en pliegues, rostros y texturas.
-        </p>
-        <a href="https://wa.me/5491164658826?text=Hola!%20Quiero%20consultar%20por%20piezas%20religiosas" target="_blank" class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brandViolet hover:underline">
-          Ver catálogo sacro <i class="fas fa-arrow-right text-xs"></i>
-        </a>
-      </div>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 overflow-hidden transition-all group">
-      <div class="h-48 bg-gradient-to-br from-gray-100 to-violet-50 flex items-center justify-center">
-        <i class="fas fa-drafting-compass text-5xl text-brandViolet group-hover:scale-110 transition duration-300"></i>
-      </div>
-      <div class="p-6">
-        <h3 class="text-xl font-bold text-gray-900">Soluciones a Medida</h3>
-        <p class="text-gray-600 text-sm mt-2 leading-relaxed">
-          ¿Tenés un archivo .STL o una idea para fabricar? Fabricamos prototipos y piezas que no encontrás en ningún lado.
-        </p>
-        <a href="https://wa.me/5491164658826?text=Hola!%20Tengo%20un%20proyecto%20a%20medida%20para%20cotizar" target="_blank" class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brandViolet hover:underline">
-          Enviar archivo <i class="fas fa-arrow-right text-xs"></i>
-        </a>
-      </div>
-    </div>
+    }
   </div>
 </section>
 
