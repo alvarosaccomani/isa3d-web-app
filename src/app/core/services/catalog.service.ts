@@ -9,7 +9,7 @@ export class CatalogService {
     {
       id: 'llaveros',
       title: 'Llaveros Personalizados',
-      description: 'Identidad para tu marca, eventos o regalos originales con acabados limpios y colores combinados.',
+      description: 'Llaveros 3D en capas multicolor con tu logo o diseño exclusivo. Definición impecable y alta durabilidad.',
       icon: 'fas fa-key',
       gradient: 'from-violet-100 to-purple-50',
       whatsappMessage: 'Hola! Me interesan los llaveros personalizados',
