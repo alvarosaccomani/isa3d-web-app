@@ -22,7 +22,8 @@ export class CatalogService {
       icon: 'fas fa-praying-hands',
       gradient: 'from-violet-100 to-indigo-50',
       whatsappMessage: 'Hola! Quiero consultar por piezas religiosas',
-      actionText: 'Ver catálogo sacro'
+      actionText: 'Ver catálogo sacro',
+      customUrl: 'https://atsmarket.com.ar/public/store-catalog/isa3d'
     },
     {
       id: 'a-medida',

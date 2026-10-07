@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { CatalogService } from '../../core/services/catalog.service';
+import { CatalogItem } from '../../core/models/catalog-item.model';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +13,7 @@ export class HomeComponent {
   private readonly catalogService = inject(CatalogService);
   protected readonly catalogItems = this.catalogService.items;
 
-  protected getWhatsAppUrl(message: string): string {
-    return `https://wa.me/5491164658826?text=${encodeURIComponent(message)}`;
+  protected getItemUrl(item: CatalogItem): string {
+    return item.customUrl ?? `https://wa.me/5491164658826?text=${encodeURIComponent(item.whatsappMessage)}`;
   }
 }

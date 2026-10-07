@@ -6,4 +6,5 @@ export interface CatalogItem {
   gradient: string;
   whatsappMessage: string;
   actionText: string;
+  customUrl?: string;
 }

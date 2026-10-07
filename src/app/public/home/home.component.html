@@ -58,7 +58,7 @@
           <p class="text-gray-600 text-sm mt-2 leading-relaxed">
             {{ item.description }}
           </p>
-          <a [href]="getWhatsAppUrl(item.whatsappMessage)" target="_blank" class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brandViolet hover:underline">
+          <a [href]="getItemUrl(item)" target="_blank" class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brandViolet hover:underline">
             {{ item.actionText }} <i class="fas fa-arrow-right text-xs"></i>
           </a>
         </div>
